@@ -41,13 +41,16 @@ You will also need to download the pretrained weights for the model and place th
 ## Usage
 Follow the steps below to use this facial recognition system:
 
-1. Place an image of the person you want to identify in the `person` directory. Be sure to label the jpeg as whatever you want the target to be known as.
-  eg. "bobby.jpg" for bobby
+1. Create a directory that you would like to run this program in, and create two subdirectories labeled 'person' and 'group_of_faces' within it. Please ensure you 
+  have downloaded the model weights, place the .h5 file in the root directory, and ensure the file is named "vgg_face_weights.h5".
+
+2.  Place an image of the person you want to identify in the `person` directory. Be sure to label the jpeg as whatever you want the target to be known as.
+  (e.g. "bobby.jpg" for bobby)
 
 3. Add a few more images of different people in the `person` directory. Ensure these images only have one face present in them as the model is not capable of 
   handling extraction of multiple faces. Don't worry about image sizing - this program preprocesses everything.
 
-5. Run the `facial_recognition.py` script.
+5. Run the `oneshot-face-recognition.py` script.
 6. The script will extract faces from the images in the `person` directory and save them in the `group_of_faces` directory.
 7. The VGGFace model will be loaded, and the face representations of extracted faces will be computed.
 8. The webcam will open, and the system will compare the faces detected by the webcam with the faces in the `group_of_faces` directory.
